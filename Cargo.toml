@@ -1,0 +1,22 @@
+[package]
+name = "linux-driver-booster"
+version = "0.1.0"
+edition = "2021"
+description = "A safety-first Linux hardware and driver scanner"
+license = "MIT"
+repository = "https://github.com/nisabzahid/linux-driver-booster"
+
+[features]
+default = []
+gtk-ui = ["dep:gtk4", "dep:libadwaita"]
+
+[dependencies]
+gtk4 = { version = "0.9", optional = true }
+libadwaita = { version = "0.7", optional = true }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "1"
+
+[[bin]]
+name = "linux-driver-booster"
+path = "src/main.rs"

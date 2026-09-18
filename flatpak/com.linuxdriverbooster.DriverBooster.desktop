@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Linux Driver Booster
+Comment=Inspect Linux hardware and loaded drivers
+Exec=linux-driver-booster
+Icon=com.linuxdriverbooster.DriverBooster
+Terminal=false
+Type=Application
+Categories=System;Utility;
+Keywords=drivers;hardware;firmware;kernel;
+StartupNotify=true

@@ -1,0 +1,22 @@
+app-id: com.linuxdriverbooster.DriverBooster
+runtime: org.gnome.Platform
+runtime-version: '47'
+sdk: org.gnome.Sdk
+command: linux-driver-booster
+finish-args:
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+modules:
+  - name: linux-driver-booster
+    buildsystem: simple
+    build-commands:
+      - cargo build --release --features gtk-ui --offline
+      - install -Dm755 target/release/linux-driver-booster /app/bin/linux-driver-booster
+      - install -Dm644 flatpak/com.linuxdriverbooster.DriverBooster.desktop /app/share/applications/com.linuxdriverbooster.DriverBooster.desktop
+      - install -Dm644 flatpak/com.linuxdriverbooster.DriverBooster.metainfo.xml /app/share/metainfo/com.linuxdriverbooster.DriverBooster.metainfo.xml
+      - install -Dm644 flatpak/icons/hicolor/scalable/apps/com.linuxdriverbooster.DriverBooster.svg /app/share/icons/hicolor/scalable/apps/com.linuxdriverbooster.DriverBooster.svg
+    sources:
+      - type: dir
+        path: ..

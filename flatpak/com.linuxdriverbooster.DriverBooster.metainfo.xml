@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.linuxdriverbooster.DriverBooster</id>
+  <name>Linux Driver Booster</name>
+  <summary>Inspect Linux hardware and loaded drivers</summary>
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+  <url type="homepage">https://github.com/nisabzahid/linux-driver-booster</url>
+  <url type="bugtracker">https://github.com/nisabzahid/linux-driver-booster/issues</url>
+  <description>
+    <p>Linux Driver Booster scans hardware, the running kernel, and loaded Linux drivers using native system interfaces.</p>
+    <p>The current release is read-only. It does not install packages or firmware and does not download arbitrary driver installers.</p>
+  </description>
+  <launchable type="desktop-id">com.linuxdriverbooster.DriverBooster.desktop</launchable>
+  <provides><binary>linux-driver-booster</binary></provides>
+  <categories><category>System</category><category>Utility</category></categories>
+  <content_rating type="oars-1.1"/>
+  <releases><release version="0.1.0" date="2026-09-18"><description><p>Initial read-only hardware and driver scanner.</p></description></release></releases>
+  <developer_name>Linux Driver Booster contributors</developer_name>
+</component>
