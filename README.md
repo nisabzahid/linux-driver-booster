@@ -18,6 +18,24 @@ The scanner still does not install, remove, or modify packages. The typed operat
 
 ## Build and run
 
+### Install on Pop!_OS or Ubuntu
+
+This installs the application for your user and adds it to the desktop application menu:
+
+```sh
+chmod +x scripts/install-local.sh scripts/run-laptop.sh
+./scripts/install-local.sh
+```
+
+Then open **Linux Driver Booster** from the application menu. To launch it from a terminal:
+
+```sh
+export PATH="$HOME/.local/bin:$PATH"
+linux-driver-booster
+```
+
+The installer uses `sudo` only for installing build and hardware-detection packages. The application itself runs as your normal user.
+
 ```sh
 cargo fmt --check
 cargo test

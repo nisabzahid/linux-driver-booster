@@ -1,3 +1,4 @@
+#[cfg(not(feature = "gtk-ui"))]
 use linux_driver_booster::SystemScanner;
 
 #[cfg(feature = "gtk-ui")]
